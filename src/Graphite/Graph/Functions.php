@@ -59,7 +59,7 @@ class Functions
         'holtWintersForecast' => [null, 50, 0],
         'integral' => [null, 50, 0],
         'keepLastValue' => [null, 50, 0],
-        'legendValue' => ['"', 50, 0],
+        'legendValue' => ['"*', 50, 0],
         'limit' => ['#', 50, 0],
         'lineWidth' => ['#', 90, 0],
         'logarithm' => ['#?', 50, 0],

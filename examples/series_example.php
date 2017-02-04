@@ -27,7 +27,7 @@ $g = Graphite\GraphBuilder::builder()
     ->prefix('com.example.host')
     ->prefix('snmp')
     ->buildSeries('memory-free')
-        ->cactistyle()
+        ->cactiStyle()
         ->color('green')
         ->alias('Free')
         ->scale(1 / (1024 * 1024)) // B to MiB

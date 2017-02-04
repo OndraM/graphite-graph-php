@@ -397,7 +397,7 @@ class GraphBuilder
      * Add a data series to the graph.
      *
      * @param string $name Name of data series to graph
-     * @param array $opts Series options
+     * @param array $opts Series options. You can use `buildSeries()` to assemble the options using DSL.
      * @return GraphBuilder Self, for message chaining
      */
     public function series($name, $opts = [])

@@ -1,5 +1,4 @@
-Graphite GraphBuilder
-=====================
+# Graphite GraphBuilder
 
 [![Latest Stable Version](https://img.shields.io/packagist/v/ondram/graphite-graph-php.svg?style=flat-square)](https://packagist.org/packages/ondram/graphite-graph-php)
 [![Build Status](https://img.shields.io/travis/OndraM/graphite-graph-php.svg?style=flat-square)](https://travis-ci.org/OndraM/graphite-graph-php)
@@ -9,8 +8,7 @@ GraphBuilder is a DSL and ini-based templating language for PHP to assist in con
 
 This is version 2 of the library (introducing eg. PSR-4 namespaces), based on [original version](https://github.com/bd808/graphite-graph-php) by [Bryan Davis](http://bd808.github.com/).
 
-About
------
+## About
 
 [Graphite](http://graphiteapp.org/) provides several interfaces for creating graphs and dashboards,
 but one of its powerful features is an [render API](https://graphite.readthedocs.io/en/latest/render_api.html) for generating graphs
@@ -23,11 +21,19 @@ Graphite graphs in PHP based applications by providing a fluent API for
 describing graphs and a facility for loading full or partial graph
 descriptions from ini files.
 
+## Installation
 
-Examples
---------
+Install using [Composer](http://getcomposer.org/):
+
+```sh
+$ composer require ondram/graphite-graph
+```
+
+## Examples
 
 ```php
+<?php
+
 $graphUrl = Graphite\GraphBuilder::builder()
     ->title('Memory')
     ->vtitle('MiB')
@@ -49,8 +55,8 @@ echo '<img src="http://graphite.example.com/render?' . $graphUrl . '">';
 For more usage examples see files in [examples/](https://github.com/OndraM/graphite-graph-php/tree/master/examples) directory.
 
 
-Credits
--------
+## Credits
+
 Originally written by [Bryan Davis](http://bd808.github.com/) with support from [Keynetics](http://keynetics.com/).
 
 Updated to use PHP namespaces etc. by [Ondrej Machulda](https://github.com/OndraM).

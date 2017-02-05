@@ -17,26 +17,31 @@ $g = Graphite\GraphBuilder::builder()
     ->prefix('collectd')
     ->prefix('com.example.host')
     ->prefix('snmp')
-    ->series('memory-free', array(
-        'cactistyle' => true,
-        'color' => '00c000',
-        'alias' => 'Free',
-        'scale' => '0.00000095367',
-      ))
-    ->series('memory-used', array(
-        'cactistyle' => true,
-        'color' => 'c00000',
-        'alias' => 'Used',
-        'scale' => '0.00000095367',
-      ))
-    ;
+    // see series_example.php for example how to generate series using buildSeries() builder
+    ->series(
+        'memory-free',
+        [
+            'cactistyle' => true,
+            'color' => '00c000',
+            'alias' => 'Free',
+            'scale' => '0.00000095367',
+        ])
+    ->series(
+        'memory-used',
+        [
+            'cactistyle' => true,
+            'color' => 'c00000',
+            'alias' => 'Used',
+            'scale' => '0.00000095367',
+        ]
+    );
 ?>
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title></title>
-  <head>
-  <body>
-    <img src="http://graphite.example.com/render?<?php echo $g; ?>">
-  </body>
+    <head>
+<body>
+<img src="http://graphite.example.com/render?<?php echo $g; ?>">
+</body>
 </html>

@@ -44,7 +44,7 @@ $graphUrl = Graphite\GraphBuilder::builder()
 echo '<img src="http://graphite.example.com/render?' . $graphUrl . '">';
 ```
 
-For more usage examples see files in `[examples/](https://github.com/OndraM/graphite-graph-php/tree/master/examples)` directory.
+For more usage examples see files in [examples/](https://github.com/OndraM/graphite-graph-php/tree/master/examples) directory.
 
 
 Credits

@@ -7,6 +7,8 @@ Graphite GraphBuilder
 
 GraphBuilder is a DSL and ini-based templating language for PHP to assist in constructing URL query strings for use with [Graphite](http://graphiteapp.org/) graphs.
 
+This is version 2 of the library (introducing eg. PSR-4 namespaces), based on [original version](https://github.com/bd808/graphite-graph-php) by [Bryan Davis](http://bd808.github.com/).
+
 About
 -----
 

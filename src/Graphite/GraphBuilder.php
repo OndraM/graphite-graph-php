@@ -20,7 +20,7 @@ use Graphite\Graph\Series;
  * @license http://www.opensource.org/licenses/BSD-2-Clause Simplified BSD License
  * @link http://bd808.com/graphite-graph-php/ GraphBuilder site
  * @link http://graphite.wikidot.com/ Graphite
- * @link http://readthedocs.org/docs/graphite/en/latest/url-api.html Graphite URL API
+ * @link https://graphite.readthedocs.io/en/latest/render_api.html
  *
  * @method $this cacheTimeout(float $value)
  * @method $this from(string $value)
@@ -165,7 +165,7 @@ class GraphBuilder
      * @param string $name Setting name or alias
      * @return mixed Setting value or null if not found
      * @see Params
-     * @see http://readthedocs.org/docs/graphite/en/latest/url-api.html
+     * @see https://graphite.readthedocs.io/en/latest/render_api.html
      */
     public function __get($name)
     {
@@ -206,7 +206,7 @@ class GraphBuilder
      * @param string $name Setting name or alias
      * @param mixed $val Value to set
      * @see Params
-     * @see http://readthedocs.org/docs/graphite/en/latest/url-api.html
+     * @see https://graphite.readthedocs.io/en/latest/render_api.html
      */
     public function __set($name, $val)
     {

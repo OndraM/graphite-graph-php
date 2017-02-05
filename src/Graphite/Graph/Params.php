@@ -15,7 +15,7 @@ class Params
      * Valid graph URI parameters.
      *
      * @var array
-     * @see http://readthedocs.org/docs/graphite/en/latest/url-api.html
+     * @see https://graphite.readthedocs.io/en/latest/render_api.html
      */
     protected static $params = [
         // request level

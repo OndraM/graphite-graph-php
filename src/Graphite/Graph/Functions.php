@@ -11,7 +11,7 @@ namespace Graphite\Graph;
  * @author Bryan Davis <bd808@bd808.com>
  * @copyright 2012 Bryan Davis and contributors. All Rights Reserved.
  * @license http://www.opensource.org/licenses/BSD-2-Clause Simplified BSD License
- * @link http://readthedocs.org/docs/graphite/en/latest/functions.html
+ * @link https://graphite.readthedocs.io/en/latest/functions.html
  */
 class Functions
 {

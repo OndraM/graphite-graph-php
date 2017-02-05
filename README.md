@@ -1,8 +1,8 @@
 # Graphite GraphBuilder
 
-[![Latest Stable Version](https://img.shields.io/packagist/v/ondram/graphite-graph-php.svg?style=flat-square)](https://packagist.org/packages/ondram/graphite-graph-php)
+[![Latest Stable Version](https://img.shields.io/packagist/v/ondram/graphite-graph-php.svg?style=flat-square)](https://packagist.org/packages/ondram/graphite-graph)
 [![Build Status](https://img.shields.io/travis/OndraM/graphite-graph-php.svg?style=flat-square)](https://travis-ci.org/OndraM/graphite-graph-php)
-[![License](https://img.shields.io/packagist/l/ondram/graphite-graph-php.svg?style=flat-square)](https://packagist.org/packages/ondram/graphite-graph-php)
+[![License](https://img.shields.io/packagist/l/ondram/graphite-graph-php.svg?style=flat-square)](https://packagist.org/packages/ondram/graphite-graph)
 
 GraphBuilder is a DSL and ini-based templating language for PHP to assist in constructing URL query strings for use with [Graphite](http://graphiteapp.org/) graphs.
 

@@ -37,7 +37,7 @@ class Params
         'fontSize' => '#',
         'height' => '#',
         'margin' => '#',
-        'outputFormat' => '-',
+        'format' => '-',
         'template' => '-',
         'width' => '#',
         'yAxisSide' => '-',
@@ -101,6 +101,7 @@ class Params
         'pie' => 'pieMode',
         'max' => 'yMax',
         'min' => 'yMin',
+        'outputFormat' => 'format',
     ];
 
     /**

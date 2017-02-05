@@ -122,6 +122,19 @@ use Graphite\GraphBuilder;
  * @method $this min(string ...$name) Alias for minSeries()
  * @method $this null(float $default = 0) Alias for transformNull()
  * @method $this sum(string ...$name) Alias for sumSeries()
+ * generators:
+ * @method $this constantLine(float $value)
+ * @method $this events(string ...$tags)
+ * @method $this randomWalkFunction(string $name)
+ * @method $this sinFunction(string $name, float $amplitude = 1, float $step = 60)
+ * @method $this threshold(float $value, string $label = null, string $color = null)
+ * @method $this timeFunction(string $name, float $step = 60)
+ * generators aliases:
+ * @method $this line(float $value) Alias for constantLine()
+ * @method $this random(string $name) Alias for randomWalkFunction()
+ * @method $this randomWalk(string $name) Alias for randomWalkFunction()
+ * @method $this sin(string $name, float $amplitude = 1, float $step = 60) Alias for sinFunction()
+ * @method $this time(string $name, float $step = 60) Alias for timeFunction()
  */
 class Series
 {

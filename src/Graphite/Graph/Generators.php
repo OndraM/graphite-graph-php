@@ -27,9 +27,9 @@ class Generators
         'constantLine' => ['#', 1, 0],
         'events' => ['"*', 1, 0],
         'randomWalkFunction' => ['"', 1, 1],
-        'sinFunction' => [['"', '-?'], 1, 1],
+        'sinFunction' => [['"', '#?', '#?'], 1, 1],
         'threshold' => [['#', '"?', '"?'], 1, 1],
-        'timeFunction' => ['"', 1, 1],
+        'timeFunction' => [['"', '"?'], 1, 1],
     ];
     /**
      * Function name aliases.
@@ -41,7 +41,6 @@ class Generators
         'random' => 'randomWalkFunction',
         'randomWalk' => 'randomWalkFunction',
         'sin' => 'sinFunction',
-        'sum' => 'sumSeries',
         'time' => 'timeFunction',
     ];
 

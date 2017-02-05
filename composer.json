@@ -1,7 +1,12 @@
 {
-  "name": "graphite-graph/graphite-graph",
-  "description": "Graphite graph DSL",
-  "keywords": ["graphite"],
+  "name": "ondram/graphite-graph",
+  "description": "Graphite graph DSL to build URL query string for a graph (PSR-4 and PHP7 compatible)",
+  "keywords": [
+    "graphite",
+    "graph",
+    "builder",
+    "url"
+  ],
   "homepage": "https://github.com/bd808/graphite-graph-php",
   "type": "library",
   "license": "BSD-2",
@@ -10,10 +15,14 @@
       "name": "Bryan Davis",
       "email": "bd808@bd808.com",
       "homepage": "http://bd808.github.com"
+    },
+    {
+      "name": "Ondřej Machulda",
+      "email": "ondrej.machulda@gmail.com"
     }
   ],
   "require": {
-    "php" : "^5.5 || ^7.0"
+    "php": "^5.5 || ^7.0"
   },
   "autoload": {
     "psr-4": {

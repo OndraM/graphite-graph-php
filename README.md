@@ -1,44 +1,56 @@
-Graphite_GraphBuilder
+Graphite GraphBuilder
 =====================
 
-[Graphite_GraphBuilder][] is a DSL and ini-based templating language to assist
-in constructing query strings for use with [Graphite][].
+[![Latest Stable Version](https://img.shields.io/packagist/v/ondram/graphite-graph-php.svg?style=flat-square)](https://packagist.org/packages/ondram/graphite-graph-php)
+[![Build Status](https://img.shields.io/travis/OndraM/graphite-graph-php.svg?style=flat-square)](https://travis-ci.org/OndraM/graphite-graph-php)
+[![License](https://img.shields.io/packagist/l/ondram/graphite-graph-php.svg?style=flat-square)](https://packagist.org/packages/ondram/graphite-graph-php)
 
-[![Build Status][ci-status]][ci-home]
+GraphBuilder is a DSL and ini-based templating language for PHP to assist in constructing URL query strings for use with [Graphite](http://graphiteapp.org/) graphs.
 
 About
 -----
 
-[Graphite][] provides several interfaces for creating graphs and dashboards,
-but one of its powerful features is an [API][url-api] for generating graphs
+[Graphite](http://graphiteapp.org/) provides several interfaces for creating graphs and dashboards,
+but one of its powerful features is an [render API](https://graphite.readthedocs.io/en/latest/render_api.html) for generating graphs
 and retrieving raw data. This allows easy embedding of graphs in custom
 dashboards and other applications.
 
 The process of describing complex graphs is however cumbersome at best.
-Graphite_GraphBuilder attempts to reduce the complexity of embedding
-Graphite graphs in [PHP][] based applications by providing a fluent API for
+GraphBuilder attempts to reduce the complexity of embedding
+Graphite graphs in PHP based applications by providing a fluent API for
 describing graphs and a facility for loading full or partial graph
 descriptions from ini files.
 
 
 Examples
 --------
-For usage and installation instructions see the main [Graphite_GraphBuilder][]
-site.
+
+```php
+$graphUrl = Graphite\GraphBuilder::builder()
+    ->title('Memory')
+    ->vtitle('MiB')
+    ->width(800)
+    ->height(600)
+    ->from('-2days')
+    ->buildSeries('memory-free')
+        ->cactiStyle()
+        ->color('green')
+        ->alias('Free')
+        ->scale(1 / (1024 * 1024)) // B to MiB
+        ->build()
+    ->build()
+    ;
+
+echo '<img src="http://graphite.example.com/render?' . $graphUrl . '">';
+```
+
+For more usage examples see files in `[examples/](https://github.com/OndraM/graphite-graph-php/tree/master/examples)` directory.
 
 
 Credits
 -------
-Written by [Bryan Davis][bd808] with support from [Keynetics][].
+Originally written by [Bryan Davis](http://bd808.github.com/) with support from [Keynetics](http://keynetics.com/).
 
-Inspired by https://github.com/ripienaar/graphite-graph-dsl/
+Updated to use PHP namespaces etc. by [Ondrej Machulda](https://github.com/OndraM).
 
----
-[Graphite_GraphBuilder]: http://bd808.com/graphite-graph-php/
-[Graphite]: http://graphite.wikidot.com/
-[url-api]: http://readthedocs.org/docs/graphite/en/latest/url-api.html
-[PHP]: http://php.net/
-[ci-status]: https://secure.travis-ci.org/bd808/graphite-graph-php.png
-[ci-home]: http://travis-ci.org/bd808/graphite-graph-php
-[bd808]: http://bd808.github.com/
-[Keynetics]: http://keynetics.com/
+Inspired by https://github.com/ripienaar/graphite-graph-dsl/.

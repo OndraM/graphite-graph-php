@@ -39,7 +39,7 @@ use Graphite\Graph\Series;
  * @method $this fontSize(float $value)
  * @method $this height(float $value)
  * @method $this margin(float $value)
- * @method $this outputFormat(string $value)
+ * @method $this format(string $value)
  * @method $this template(string $value)
  * @method $this width(float $value)
  * @method $this yAxisSide(string $value)
@@ -96,6 +96,7 @@ use Graphite\Graph\Series;
  * @method $this pie(string $value)
  * @method $this max(float $value)
  * @method $this min(float $value)
+ * @method $this outputFormat(string $value)
  */
 class GraphBuilder
 {
